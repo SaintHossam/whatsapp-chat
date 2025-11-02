@@ -1,0 +1,348 @@
+/**
+ * Saint Hossam WhatsApp Chat Styles
+ * Version: 1.0.0
+ * Author: Saint Hossam
+ */
+
+/* Floating WhatsApp Button */
+.sh-whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  z-index: 9998;
+  animation: sh-pulse 2s infinite;
+}
+
+.sh-whatsapp-button.sh-position-right {
+  right: 20px;
+}
+
+.sh-whatsapp-button.sh-position-left {
+  left: 20px;
+}
+
+.sh-wa-trigger {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  border: none;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.sh-wa-trigger:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+}
+
+.sh-wa-trigger i {
+  font-size: 32px;
+  color: white;
+}
+
+/* Pulse animation */
+@keyframes sh-pulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(37, 211, 102, 0.8);
+  }
+}
+
+/* WhatsApp Chat Popup */
+.sh-whatsapp-popup {
+  position: fixed;
+  bottom: 90px;
+  z-index: 9999;
+  animation: sh-slideUp 0.3s ease;
+}
+
+.sh-whatsapp-popup.sh-position-right {
+  right: 20px;
+}
+
+.sh-whatsapp-popup.sh-position-left {
+  left: 20px;
+}
+
+/* Slide up animation */
+@keyframes sh-slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.sh-whatsapp-popup-content {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+  width: 360px;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Header */
+.sh-whatsapp-header {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.sh-wa-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sh-wa-icon i {
+  font-size: 26px;
+}
+
+.sh-wa-info h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sh-wa-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  opacity: 0.95;
+}
+
+/* Online status indicator */
+.sh-status-dot {
+  width: 8px;
+  height: 8px;
+  background: #4ade80;
+  border-radius: 50%;
+  display: inline-block;
+  animation: sh-blink 2s infinite;
+}
+
+@keyframes sh-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Close button */
+.sh-whatsapp-close {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.sh-whatsapp-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+/* Body */
+.sh-whatsapp-body {
+  padding: 20px;
+  background: #f0f2f5;
+  min-height: 200px;
+  direction: rtl;
+  text-align: right;
+}
+
+/* Welcome message bubble */
+.sh-welcome-bubble {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.sh-welcome-bubble p {
+  margin: 0 0 8px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.sh-bubble-time {
+  font-size: 11px;
+  color: #999;
+  display: block;
+  text-align: left;
+}
+
+/* Message input area */
+.sh-message-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#sh-whatsapp-message {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: none;
+  font-family: inherit;
+  font-size: 14px;
+  background: white;
+  transition: border-color 0.3s;
+}
+
+#sh-whatsapp-message:focus {
+  outline: none;
+  border-color: #25d366;
+}
+
+/* Send button */
+.sh-send-btn {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.sh-send-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+.sh-send-btn i {
+  font-size: 16px;
+}
+
+/* Footer */
+.sh-whatsapp-footer {
+  background: #f8f9fa;
+  padding: 12px 20px;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+}
+
+.sh-whatsapp-footer small {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.sh-whatsapp-footer strong {
+  color: #25d366;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sh-whatsapp-popup-content {
+    width: calc(100vw - 20px);
+    max-width: 360px;
+  }
+
+  .sh-whatsapp-button {
+    bottom: 15px;
+  }
+
+  .sh-whatsapp-button.sh-position-right {
+    right: 15px;
+  }
+
+  .sh-whatsapp-button.sh-position-left {
+    left: 15px;
+  }
+
+  .sh-whatsapp-popup {
+    bottom: 80px;
+  }
+
+  .sh-whatsapp-popup.sh-position-right {
+    right: 10px;
+  }
+
+  .sh-whatsapp-popup.sh-position-left {
+    left: 10px;
+  }
+
+  .sh-wa-trigger {
+    width: 55px;
+    height: 55px;
+  }
+
+  .sh-wa-trigger i {
+    font-size: 28px;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .sh-whatsapp-popup-content {
+    background: #1f2937;
+  }
+
+  .sh-whatsapp-body {
+    background: #111827;
+  }
+
+  .sh-welcome-bubble {
+    background: #374151;
+  }
+
+  .sh-welcome-bubble p {
+    color: #e5e7eb;
+  }
+
+  #sh-whatsapp-message {
+    background: #374151;
+    border-color: #4b5563;
+    color: #e5e7eb;
+  }
+
+  .sh-whatsapp-footer {
+    background: #1f2937;
+    border-top-color: #374151;
+  }
+}
