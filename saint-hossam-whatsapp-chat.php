@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: Saint Hossam WhatsApp Chat
+ * Plugin Name: WhatsApp Chat
  * Plugin URI: https://github.com/SaintHossam/whatsapp-chat
  * Description: Professional floating WhatsApp chat window for Arabic websites
  * Version: 1.0.0
- * Author: Saint Hossam
+ * Author: Hossam Hamdy (Saint Hossam)
  * Author URI: https://github.com/SaintHossam
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
