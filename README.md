@@ -1,4 +1,4 @@
-# 🚀 Saint Hossam WhatsApp Chat
+# 🚀 WhatsApp Chat
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![WordPress](https://img.shields.io/badge/WordPress-5.0+-green.svg)
